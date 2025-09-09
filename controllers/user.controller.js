@@ -10,7 +10,7 @@ exports.postRegister = (req, res) => {
     let newCustomer = new customerModel(req.body);
     newCustomer.save()
     .then(() => {
-        res.redirect("/dashboard");
+        res.redirect("/user/dashboard");
     })
     .catch((err) => {
         console.error("Error registering user:", err);
