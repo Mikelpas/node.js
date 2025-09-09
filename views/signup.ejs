@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-container {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 370px;
+        }
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+            letter-spacing: 1px;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #444;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #cfd8dc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.2s;
+        }
+        .form-group input:focus {
+            border-color: #66a6ff;
+            outline: none;
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(90deg, #66a6ff, #89f7fe);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .signup-btn:hover {
+            background: linear-gradient(90deg, #89f7fe, #66a6ff);
+        }
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.2rem;
+            color: #66a6ff;
+            text-decoration: none;
+            font-size: 0.98rem;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create Account</h2>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="6">
+            </div>
+            <button class="signup-btn" type="submit">Sign Up</button>
+        </form>
+        <a class="login-link" href="/login">Already have an account? Log in</a>
